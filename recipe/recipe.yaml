@@ -24,7 +24,7 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
         - cython
-        - numpy
+        - numpy <2.0
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
   host:
