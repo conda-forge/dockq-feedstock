@@ -31,14 +31,14 @@ requirements:
     - python
     - setuptools >=68
     - cython
-    - ${{ pin_compatible('numpy') }}
+    - numpy
     - pip
   run:
     - python
     - biopython >=1.79
     - networkx
     - parallelbar
-    - ${{ pin_compatible('numpy') }}
+    - numpy
 
 tests:
   - python:
