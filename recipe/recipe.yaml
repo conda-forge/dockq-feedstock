@@ -24,7 +24,7 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
         - cython
-        - ${{ pin_compatible('numpy') }}
+        - numpy
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
   host:
