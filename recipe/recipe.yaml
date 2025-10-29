@@ -31,7 +31,7 @@ requirements:
     - python
     - setuptools >=68
     - cython
-    - numpy
+    - ${{ pin_compatible('numpy') }}
     - pip
   run:
     - python
