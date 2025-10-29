@@ -24,14 +24,14 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
         - cython
-        - numpy <2.0
+        - ${{ pin_compatible('numpy') }}
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
   host:
     - python
     - setuptools >=68
     - cython
-    - numpy <2.0
+    - ${{ pin_compatible('numpy') }}
     - pip
   run:
     - python
