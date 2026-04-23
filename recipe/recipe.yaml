@@ -11,7 +11,7 @@ source:
   sha256: 50c4e2b4bced3bf865b12061ec0b56e23de1383dc70b445441848224f6c72c0d
 
 build:
-  number: 1
+  number: 2
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
@@ -24,14 +24,14 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
         - cython
-        - numpy <2.0
+        - numpy
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
   host:
     - python
     - setuptools >=68
     - cython
-    - numpy <2.0
+    - numpy
     - pip
   run:
     - python
@@ -44,6 +44,9 @@ tests:
   - python:
       imports:
         - DockQ
+    requirements:
+      run:
+        - ${{ pin_compatible('numpy') }}
   - requirements:
       run:
         - pip
